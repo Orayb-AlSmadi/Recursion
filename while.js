@@ -512,11 +512,16 @@ hi 7 Now Pleas Say Hello To 1, 2, 3, 4, 5 and 6
 */
 
 function  HiSayHelloTo(v)
-{   var c=1;
-    if (v===1)
-    {return "hi "+1}
-    var hi ="hi "+v+" Now Please Say Hello To " 
+{   
+    console.log("hi "+1)
+    var i =v;
+    var c=1;
     
+    v=2;
+        
+    while (v<=i)
+    {
+        var hi ="hi "+v+" Now Please Say Hello To " 
     while (c<v)
     {   if (c+2===v)
         {
@@ -525,11 +530,22 @@ function  HiSayHelloTo(v)
         else if (c+1===v) 
         {
             hi = hi+c;
+            break
+            c=v-1;
         }
         else 
         { hi= hi+c +", "
         }
         c++;
     }
-return hi;
+    console.log (hi)
+    c= 1;
+    v++
+    }
+
+
+
+
+
+// return ;
 }
