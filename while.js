@@ -14,12 +14,22 @@ that takes a single parameter n,
 and return the subtraction of all
 starting from n to 0
 
-Ex: subtract(2); => 2 - 1 - 0 => 1
+Ex: subtract(2); => (2) - 1 - 0 => 1
 Ex: subtract(5); => 5 - 4 - 3 - 2 - 1 - 0 => -5
 Ex: subtract(9); => 9 - 8 - 7 - 6 - 5 - 4 - 3 - 2 - 1 - 0 => -27
 
 */
-
+function subtract(n)
+{
+var s=n;
+n--;
+    while (n > 0)
+    {
+        s=s-n;
+        n--;
+    }
+return s;
+}
 
 /*
 2
@@ -27,10 +37,20 @@ Create a function called factorial
 that takes a single parameter n,
 and return the product of all integers up to n starting from 1
 
-Ex: factorial(2); => 2 * 1 => 6
+Ex: factorial(2); => 2 * 1 => 2
 Ex: factorial(4); => 4 * 3 * 2 * 1 => 24
 */
+function factorial(n)
+{
+var m = 1;
+while (n>1)
+{
+    m=m*n;
+    n--;
+}
 
+return m
+}
 
 /*
 3
@@ -44,6 +64,18 @@ Ex: repeatStr("to",2); => "to to"
 Ex: repeatStr("to",4); => "to to to to"
 */
 
+function repeatStr (str, num){
+
+var output="";
+    while (num>=1)
+    {
+        output=  output+" "+ str ;
+        num--;
+    }
+
+    
+    console.log(output)
+}
 
 /*
 4
@@ -54,7 +86,19 @@ and will return the sumation from the first number to the second number
 Ex: sum2(4, 5); => 4 + 5 => 9
 Ex: sum2(3, 6); => 3 + 4 + 5 + 6 => 18
 */
+function sum2 (n1 , n2)
+{
+var sum2 = 0;
 
+while (n1<=n2)
+{
+    sum2= sum2+n1;
+    n1++;
+}
+
+
+return sum2
+}
 
 /*
 5
@@ -68,7 +112,19 @@ and return the first string number time
 Ex: repeatStr2("ro","cc"); => "ro ro"
 Ex: repeatStr2("ro","fff"); => "ro ro ro"
 */
+function repeatStr2 (str,str2){
 
+    var num = str2.length;
+    var output="";
+        while (num>=1)
+        {
+            output=  output+" "+ str ;
+            num--;
+        }
+    
+        
+        console.log(output)
+    }
 
 /*
 6
@@ -83,7 +139,19 @@ Ex: multiOf(6,3,2); => 54
 Ex: multiOf(6,2,3); => 48
 
 */
+function multiOf (x, y, z)
+{
+   var output=1;
 
+   while (z>0)
+   {
+       output= output*y;
+       z--;
+   }
+
+
+    return output*x;
+}
 
 /*
 7
@@ -92,9 +160,23 @@ that take two parameter
 and will return the multiplication from the first number to the second number
 
 Ex: muti2(4, 5); => 4 * 5 => 20
-Ex: muti2(3, 6); => 3 * 4 * 5 * 6 => 360
+Ex: n => 3 * 4 * 5 * 6 => 360
 */
 
+function muti2 (n1,n2)
+{
+
+var multi = 1;
+
+while (n1<=n2)
+{
+    multi= multi*n1;
+    n1++;
+}
+
+
+return multi
+} 
 
 /*
 8
@@ -110,6 +192,18 @@ numberBetweenUs(2,8) => "3, 4, 5, 6, 7"
 numberBetweenUs(1,3) => "2"
 
 */
+function numberBetweenUs(num1,num2){
+   
+    
+    var d=""+ (++num1);
+while (num1!==num2-1)
+
+{num1++;
+    d=d+", "+num1;
+}
+
+return d
+}
 
 
 /*
@@ -133,19 +227,47 @@ countDown(7)
 => "7, 6, 5, 4, 3, 2, 1, done"
 */
 
+
+function countDown(num1){
+var k=""+num1--;
+
+while(num1>0)
+{
+ 
+ k=k+", "+num1;
+    num1--;
+
+}
+
+    return k +", done"
+}
+
 /*
 10
 Write a function called multiplication2
 that takes two parameters
 and return the multiplication of them
 you need to use only sum
-
 multiplication2(5,4) => 20
-
 multiplication2(2,8) => 16
-
 multiplication2(7,6) =>  42
 */
+
+function multiplication2(x,y){
+
+var sum=0
+    while(x>0)
+    {
+        sum=sum+y;
+        --x;
+    }
+
+
+
+    return sum 
+}
+ 
+
 
 /*
 11
@@ -159,6 +281,15 @@ mod2(2,8) => 2
 
 mod2(7,4) => 3
 */
+function mod2 (x,y) {
+
+while(x>=y)
+x=x-y;
+
+
+
+    return x;
+}
 
 
 /*
@@ -181,7 +312,24 @@ try more case by yourself
 */
 
 
+function repeatChar(x,y) {
+    var a= x.toLowerCase();
+    var b= y.toLowerCase();
 
+var le=a.length;
+var c=0;    
+
+while((le-1)>=0)
+{
+if (a[le-1] === b)
+{
+c++;
+}
+le--;
+}
+
+return c;
+}
 
 
 
