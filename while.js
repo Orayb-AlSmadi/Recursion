@@ -360,8 +360,21 @@ fibon(n): 1 1 2 3 5 8 13 21
           | | | | | |  |  |
 n:        0 1 2 3 4 5  6  7
 */
+function  fibon (n)
+{
+var a=1;
+var b=1;
+var f=0;
+    while (n>=2)
+    {
+        f=a+b;
+        a=b;
+        b=f;
+        n--;
+    }
 
-
+return f
+}
 /*
 2
 Write a function called mirror
@@ -379,7 +392,19 @@ mirror("maDrasa") => "asarDam"
 
 */
 
+function mirror (x)
+{ 
+    var l=x.length;
+    var rev="";
 
+while (l>0)
+{
+rev = rev +x[l-1];
+l--;
+}
+
+return rev
+}
 
 /*
 3
@@ -400,7 +425,28 @@ mirrorCaseAlso("BaBa") => "AbAb"
 
 */
 
+function mirrorCaseAlso (x)
+{ 
+    var l=x.length;
+    var rev="";
+    var o= "";
 
+while (l>0)
+{
+if (x[l-1]=== (x[l-1]).toLowerCase())
+{ 
+o =  (x[l-1]).toUpperCase();
+}
+else {
+o =  (x[l-1]).toLowerCase();
+}
+
+rev = rev +o;
+l--;
+}
+
+return rev
+}
 
 /*
 4
@@ -421,6 +467,24 @@ repeatChar2("School","S") => 1
 
 try more case by yourself
 */
+
+function repeatChar2(x,y) {
+   
+
+var le=x.length;
+var c=0;    
+
+while((le-1)>=0)
+{
+if (x[le-1] === y)
+{
+c++;
+}
+le--;
+}
+
+return c;
+}
 
 
 /*
@@ -447,3 +511,25 @@ hi 6 Now Pleas Say Hello To 1, 2, 3, 4 and 5
 hi 7 Now Pleas Say Hello To 1, 2, 3, 4, 5 and 6
 */
 
+function  HiSayHelloTo(v)
+{   var c=1;
+    if (v===1)
+    {return "hi "+1}
+    var hi ="hi "+v+" Now Please Say Hello To " 
+    
+    while (c<v)
+    {   if (c+2===v)
+        {
+            hi=hi+c+" and "; 
+        }
+        else if (c+1===v) 
+        {
+            hi = hi+c;
+        }
+        else 
+        { hi= hi+c +", "
+        }
+        c++;
+    }
+return hi;
+}
